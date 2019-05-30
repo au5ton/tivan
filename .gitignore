@@ -9,3 +9,10 @@
 # include these in source
 !pearson/
 !pearson/phys.py
+
+!reddit/
+!reddit/friends/
+!reddit/friends/cron.job
+!reddit/friends/genfriends.py
+!reddit/friends/ripfriends.sh
+!reddit/friends/ripuser.sh
