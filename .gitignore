@@ -1,0 +1,9 @@
+# https://stackoverflow.com/a/5250314
+
+# ignore everything
+*
+
+!.gitignore
+!README.md
+
+# include these in source
