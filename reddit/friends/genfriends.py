@@ -19,7 +19,9 @@ reddit = praw.Reddit(client_id=config['REDDIT']['ClientId'],
 friends = reddit.user.friends()
 print(f'>> friends pulled ({len(friends)})')
 usernames = [u.name for u in friends]
-usernames.sort()
+usernames.sort(key=str.lower)
+
+exit()
 
 print('>> writing friends.txt')
 with open(os.path.join(PATH,'friends.txt'), 'w') as f:
