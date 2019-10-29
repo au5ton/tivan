@@ -16,3 +16,6 @@
 !reddit/friends/genfriends.py
 !reddit/friends/ripfriends.sh
 !reddit/friends/ripuser.sh
+!reddit/friends/download.py
+!reddit/friends/importfriends.py
+!reddit/friends/gensubmissions.py
