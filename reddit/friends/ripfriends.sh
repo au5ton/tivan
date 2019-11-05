@@ -5,4 +5,4 @@ cd "$(dirname "$0")"
 #	./ripuser.sh "$p"
 #done <friends.txt
 
-cat friends.txt | parallel -j 2 ./ripuser.sh {}
+cat friends.txt | parallel --shuf -j 2 ./ripuser.sh {}

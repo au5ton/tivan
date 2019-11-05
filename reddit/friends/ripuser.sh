@@ -22,4 +22,4 @@ mkdir -p "./dips2/$1"
 
 #./gensubmissions.py "$1" | parallel -j 4 youtube-dl -o "'./dips2/$1/%(title)s-%(id)s.%(ext)s'" {}
 
-./gensubmissions.py "$1" | parallel -j 4 ./download.py --out "./dips2/$1" {}
+./gensubmissions.py "$1" --dedupe | parallel -j 2 ./download.py --out "./dips2/$1" {}

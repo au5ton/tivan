@@ -18,9 +18,18 @@ reddit = praw.Reddit(client_id=config['REDDIT']['ClientId'],
 parser = argparse.ArgumentParser(description='reddit username')
 parser.add_argument('uname', metavar='spez', type=str,
                     help='reddit username')
+parser.add_argument('--dedupe', action='store_true')
 args = parser.parse_args()
 
-for x in reddit.redditor(name=args.uname).submissions.new(limit=None):
-	print(x.url)
+l = []
+if args.dedupe == True:
+    for x in reddit.redditor(name=args.uname).submissions.new(limit=None):
+        l += [x.url]
+    l = list(set(l))
+    for x in l:
+        print(x)
+else:
+    for x in reddit.redditor(name=args.uname).submissions.new(limit=None):
+        print(x.url)
 
 
