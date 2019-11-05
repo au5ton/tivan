@@ -19,3 +19,6 @@
 !reddit/friends/download.py
 !reddit/friends/importfriends.py
 !reddit/friends/gensubmissions.py
+!reddit/friends-streaming/
+!reddit/friends-streaming/download.py
+!reddit/friends-streaming/watch.py
